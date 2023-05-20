@@ -1,0 +1,59 @@
+@keyframes video-hover {
+	0% {
+		padding: 8px;
+	}
+	100% {
+		padding: 0px;
+	}
+}
+
+@keyframes not-video-hover {
+	0% {
+		padding: 0px;
+	}
+	100% {
+		padding: 8px;
+	}
+}
+
+@keyframes playbtn-hover {
+	0% {
+		padding: 16px;
+	}
+	100% {
+		padding: 8px;
+	}
+}
+
+@keyframes not-playbtn-hover {
+	0% {
+		padding: 8px;
+	}
+	100% {
+		padding: 16px;
+	}
+}
+
+.video:hover {
+	animation: video-hover 0.15s linear;
+}
+
+.video:not(:hover) {
+	animation: not-video-hover 0.15s linear;
+}
+
+.video:hover .playBtn {
+	animation: playbtn-hover 0.15s linear;
+}
+
+.video:not(:hover) .playBtn {
+	animation: not-playbtn-hover 0.15s linear;
+}
+
+.video{
+	min-width: 308px;
+}
+
+.img{
+	min-width: 292px;
+}

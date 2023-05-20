@@ -2,26 +2,84 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap");
+
+html {
+	font-family: "Source Sans Pro" ,arial , sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.h-75 {
+	height: 300px;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.h-93 {
+	height: 372px;
+}
+
+.h-127 {
+	height: 508px;
+}
+
+.h-142 {
+	height: 568px;
+}
+
+.w-77 {
+	width: 308px;
+}
+
+.bg-banner {
+	background-image: linear-gradient(
+			to right,
+			rgba(3, 37, 65, 0.8) 0%,
+			rgba(3, 37, 65, 0) 100%
+		),
+		url("https://www.themoviedb.org/t/p/w1920_and_h600_multi_faces_filter(duotone,00192f,00baff)/9ZyAUZrfccsjtDwYgc7yvOBnqM9.jpg");
+}
+
+.button-search {
+	background: linear-gradient(
+		to right,
+		rgba(30, 213, 169, 1) 0%,
+		rgba(1, 180, 228, 1) 100%
+	);
+}
+
+.bg-film-column {
+	background-image: linear-gradient(
+		to right,
+		rgba(255, 255, 255, 0) 0%,
+		#fff 100%
+	);
+}
+
+.bg-trending {
+	background-image: url("https://www.themoviedb.org/assets/2/v4/misc/trending-bg-39afc2a5f77e31d469b25c187814c0a2efef225494c038098d62317d923f8415.svg");
+	background-repeat: no-repeat;
+	background-positions: bottom;
+}
+
+.top-50 {
+	top: 12.5rem;
+}
+
+.bgButton {
+	background-image: linear-gradient(to right, #c0fecf 0%, #1ed5a9 100%);
+}
+.borderLightGreen {
+	border: 1px solid rgba(30, 213, 169, 1);
+}
+
+html *::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+
+html *::-webkit-scrollbar-thumb {
+	border-radius: 20px;
+	background-color: rgba(219, 219, 219, 1);
+}
+
+html *::-webkit-scrollbar-track {
+	background: transparent;
 }

@@ -1,0 +1,16 @@
+.bgBanner {
+	background-position: calc((50vw - 170px) - 440px);
+}
+
+.bgCoatBanner {
+	background-image: linear-gradient(
+		to right,
+		rgba(31.5, 31.5, 10.5, 1) calc((50vw - 170px) - 340px),
+		rgba(31.5, 31.5, 10.5, 0.84) 50%,
+		rgba(31.5, 31.5, 10.5, 0.84) 100%
+	);
+}
+
+.posterHoverColor:hover {
+	background-color: rgba(0,0,0,0.7);
+}

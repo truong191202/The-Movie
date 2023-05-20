@@ -1,0 +1,41 @@
+@keyframes right {
+	0% {
+		left: 0;
+		width: 80px;
+	}
+	50% {
+		left: 70px;
+		width: 102px;
+	}
+	100% {
+		left: 80px;
+		width: 112px;
+	}
+}
+@keyframes left {
+	0% {
+		left: 80px;
+		width: 112px;
+	}
+	50% {
+		left: 70px;
+		width: 102px;
+	}
+	100% {
+		left: 0;
+		width: 80px;
+	}
+}
+
+.toRight {
+	animation: right 0.25s linear;
+}
+.toLeft {
+	animation: left 0.2s linear;
+}
+
+.textBtn {
+	background: linear-gradient(to right, #c0fecf 0%, #1ed5a9 100%);
+	background-clip: text;
+	color: transparent;
+}
