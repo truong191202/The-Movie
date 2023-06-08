@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 
 import DefaultLayout from "@/layouts/DefaultLayout";
-import MenuDetailPage from "@/components/detailPage/MenuDetailPage";
+import MenuDetailPage from "@/components/Pages/detailPage/MenuDetailPage";
 
 const overViewArray = [
 	{

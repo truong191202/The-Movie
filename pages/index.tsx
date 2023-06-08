@@ -1,4 +1,4 @@
-import HomeBody from "@/components/home/HomeBody";
+import HomeBody from "@/components/Pages/home/HomeBody";
 import DefaultLayout from "@/layouts/DefaultLayout";
 
 export default function Home() {
