@@ -35,7 +35,6 @@ function FilmPictureItem({ path, title, vote_average, date, type, id }: Props) {
 				className="top-50 left-2 w-10 h-10 text-sm absolute"
 				classNamePercent="text-xxs absolute"
 				classNamePercentNumber="absolute"
-				classNameCanvas="absolute"
 			/>
 		</div>
 	);
