@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import Color, { Palette } from "color-thief-react";
 import styles from "./detailPage.module.css";
 import { convertDate, convertTime } from "@/utils";
 import {
@@ -11,6 +11,7 @@ import {
 	WatchListIcon,
 } from "@/assets/Icons";
 import RatingCircle from "@/components/RatingCircle/RatingCircle";
+import { useEffect, useState } from "react";
 interface GenresItem {
 	id: number;
 	name: string;
@@ -34,16 +35,54 @@ function BannerDetailPage({
 	runtime,
 	vote_average,
 }: Props) {
+	const [backgroundImage, setBackgroundImage] = useState("");
 	const date = convertDate(releaseDate, "dd/mm/yyyy");
 	const time = convertTime(runtime);
 	const percentNumber = Math.round(vote_average * 10);
+	useEffect(() => {
+		setBackgroundImage(backgroundPath);
+	}, [backgroundPath]);
 	return (
 		<div
 			style={{
-				backgroundImage: `url('https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces${backgroundPath}')`,
+				backgroundImage: `url('https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces${backgroundImage}')`,
 			}}
 			className={`h-142 w-full bg-cover bg-no-repeat ${styles.bgBanner}`}
 		>
+			<Color
+				src={`https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces${backgroundImage}`}
+				crossOrigin="anonymous"
+				format="hex"
+			>
+				{({ data, loading }) => {
+					return (
+						<div>
+							Predominant color: <strong>{data}</strong>
+						</div>
+					);
+				}}
+			</Color>
+			<Palette
+				src={`https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces${backgroundImage}`}
+				crossOrigin="anonymous"
+				format="hex"
+				colorCount={4}
+			>
+				{({ data, loading }) => {
+					return (
+						<div>
+							Palette:
+							<ul>
+								{data?.map((color, index) => (
+									<li key={index} style={{ color: color }}>
+										<strong>{color}</strong>
+									</li>
+								))}
+							</ul>
+						</div>
+					);
+				}}
+			</Palette>
 			<div
 				className={`w-full h-full flex justify-center ${styles.bgCoatBanner}`}
 			>
