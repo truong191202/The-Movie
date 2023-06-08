@@ -49,7 +49,7 @@ function BannerDetailPage({
 			}}
 			className={`h-142 w-full bg-cover bg-no-repeat ${styles.bgBanner}`}
 		>
-			<Color
+			{/* <Color
 				src={`https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces${backgroundImage}`}
 				crossOrigin="anonymous"
 				format="hex"
@@ -82,7 +82,7 @@ function BannerDetailPage({
 						</div>
 					);
 				}}
-			</Palette>
+			</Palette> */}
 			<div
 				className={`w-full h-full flex justify-center ${styles.bgCoatBanner}`}
 			>
