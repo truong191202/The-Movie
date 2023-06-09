@@ -1,12 +1,14 @@
 import HomeBody from "@/components/Pages/home/HomeBody";
 import DefaultLayout from "@/layouts/DefaultLayout";
-
+import IndexPage from "./head";
 export default function Home() {
 	return (
-		<div className="w-full flex flex-col items-center">
-			<DefaultLayout>
-				<HomeBody />
-			</DefaultLayout>
-		</div>
+		<IndexPage>
+			<div className="w-full flex flex-col items-center">
+				<DefaultLayout>
+					<HomeBody />
+				</DefaultLayout>
+			</div>
+		</IndexPage>
 	);
 }
